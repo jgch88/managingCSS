@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { ThemeProvider } from '@material-ui/styles';
+import Button from '@material-ui/core/Button';
+import theme from './theme.js';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +22,9 @@ function App() {
         >
           Learn React
         </a>
+        <ThemeProvider theme={theme}>
+          <Button variant="contained" color="primary">Button</Button>
+        </ThemeProvider>
       </header>
     </div>
   );
