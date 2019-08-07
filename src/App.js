@@ -6,6 +6,8 @@ import { ThemeProvider } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import theme from './theme.js';
 
+import ButtonWithStyles from './ButtonWithStyles.js'
+
 function App() {
   return (
     <div className="App">
@@ -23,8 +25,10 @@ function App() {
           Learn React
         </a>
         <ThemeProvider theme={theme}>
-          <Button variant="contained" color="primary">Button</Button>
+          <Button variant="contained" color="primary">ThemeProvider Button</Button>
+          <ButtonWithStyles>withStyles Button</ButtonWithStyles>
         </ThemeProvider>
+
       </header>
     </div>
   );
