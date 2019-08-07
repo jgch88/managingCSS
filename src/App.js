@@ -6,7 +6,9 @@ import { ThemeProvider } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import theme from './theme.js';
 
-import ButtonWithStyles from './ButtonWithStyles.js'
+import ButtonWithStyles from './ButtonWithStyles.js';
+
+import ButtonStyledComponent from './ButtonStyledComponent.js';
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
         </a>
         <ThemeProvider theme={theme}>
           <Button variant="contained" color="primary">ThemeProvider Button</Button>
-          <ButtonWithStyles>withStyles Button</ButtonWithStyles>
+          <ButtonWithStyles someProps={'somePropValue'}>withStyles Button</ButtonWithStyles>
+          <ButtonStyledComponent someProps={'somePropValue'}/>
         </ThemeProvider>
 
       </header>

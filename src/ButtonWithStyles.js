@@ -5,12 +5,18 @@ import { withStyles } from '@material-ui/styles';
 const styles = {
   buttonWithStyle: {
     backgroundColor: "#61dafb"
+  },
+  link: {
+    color: "#61dafb"
   }
 }
 
 const ButtonWithStylesHOC = (props) => {
   const { classes } = props;
-  return <Button className={ classes.buttonWithStyle }>HOC</Button>;
+  return <>
+    <a href="/" className={ classes.link }>test</a>
+    <Button className={ classes.buttonWithStyle }>withStyles HOC Button {props.someProps}</Button>
+  </>;
 }
 
 export default withStyles(styles)(ButtonWithStylesHOC);
