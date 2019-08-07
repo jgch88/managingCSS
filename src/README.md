@@ -13,6 +13,7 @@ e.g. this works!
         </ThemeProvider>
 
 this works too!
+
         <ThemeProvider theme={theme}>
           <Button variant="contained" color="primary">ThemeProvider Button</Button>
         </ThemeProvider>
